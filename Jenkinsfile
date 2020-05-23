@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker{
-            image 'python'
+            image 'ralphh1/pywd'
         }
     }
     
