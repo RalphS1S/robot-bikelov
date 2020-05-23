@@ -18,6 +18,11 @@ pipeline {
                 sh 'robot -d ./logs -e todo testes/'
                 robot otherFiles: '**/*.png', outputPath: 'logs'
             }
+            post {
+                always {
+                   robot otherFiles: '**/*.png', outputPath: 'logs' 
+                }
+            }
         }
         stage('UAT'){
             steps{
