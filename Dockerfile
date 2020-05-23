@@ -2,7 +2,7 @@
 ### QA NINJA
 ###
 
-FROM python:3.7.6-stretch
+FROM python:3.8-slim-stretch
 
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90qaninja \
   && echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/90qaninja
